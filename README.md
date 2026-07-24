@@ -1,4 +1,3 @@
-# painter-website
 # Software Design Document
 
 ## Painter Portfolio Website
