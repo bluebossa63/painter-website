@@ -169,3 +169,32 @@ h2 { font-size: 1.5rem; }
   .contact-layout { grid-template-columns: 1fr; }
   .enquiry-guidance { padding-top: 0; }
 }
+
+.home { display: grid; gap: clamp(5rem, 12vw, 10rem); }
+.home-hero { display: grid; grid-template-columns: minmax(0, .9fr) minmax(20rem, 1.1fr); align-items: center; gap: clamp(2rem, 8vw, 7rem); }
+.home-hero__art { min-height: clamp(25rem, 55vw, 40rem); }
+.home-section { display: grid; gap: 2rem; }
+.section-heading { display: flex; justify-content: space-between; align-items: end; gap: 2rem; border-bottom: 1px solid #cbc5bb; padding-bottom: 1.5rem; }
+.section-heading h2, .home-project h2, .home-about h2, .home-contact h2 { margin: 0; font-size: clamp(2.25rem, 5vw, 4rem); }
+.home-artwork-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; }
+.home-artwork .generated-art { min-height: clamp(16rem, 30vw, 24rem); }
+.home-artwork .eyebrow { margin: 1.25rem 0 .35rem; }
+.home-artwork h3 { margin: 0; font-family: Georgia, serif; font-size: 1.5rem; font-weight: 400; }
+.home-artwork p:last-child { margin: .35rem 0 0; color: #686157; }
+.home-project { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(18rem, .9fr); align-items: center; gap: clamp(2.5rem, 7vw, 6rem); }
+.home-project__meta { display: grid; gap: .65rem; margin: 2rem 0; }
+.home-project__meta div { display: grid; grid-template-columns: 5rem 1fr; gap: 1rem; border-top: 1px solid #cbc5bb; padding-top: .65rem; }
+.home-project__meta dt { color: #71685d; }
+.home-project__meta dd { margin: 0; }
+.home-about { display: grid; grid-template-columns: minmax(15rem, .7fr) minmax(0, 1.3fr); gap: clamp(2rem, 8vw, 7rem); border-block: 1px solid #cbc5bb; padding-block: clamp(2.5rem, 6vw, 4.5rem); }
+.home-about .lede { margin-top: 0; }
+.home-contact { max-width: 50rem; text-align: left; }
+.home-contact p:not(.eyebrow) { max-width: 52ch; margin-bottom: 2rem; color: #59534b; font-size: 1.1rem; }
+
+@media (max-width: 700px) {
+  .home { gap: 5rem; }
+  .home-hero, .home-project, .home-about { grid-template-columns: 1fr; }
+  .home-hero__art { min-height: 24rem; }
+  .home-artwork-grid { grid-template-columns: 1fr; }
+  .section-heading { align-items: flex-start; flex-direction: column; }
+}
