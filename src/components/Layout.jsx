@@ -6,11 +6,10 @@ const navigation = [
   ['/contact', 'Contact'],
 ]
 
-export default function Layout({ children }) {
-  const currentPath = window.location.pathname
-
+export default function Layout({ children, currentPath }) {
   return (
     <div className="site-shell">
+      <a className="skip-link" href="#main-content">Skip to content</a>
       <header className="site-header">
         <a className="brand" href="/" aria-label="Painter portfolio home">
           Painter Name
@@ -27,7 +26,7 @@ export default function Layout({ children }) {
           </ul>
         </nav>
       </header>
-      <main id="main-content">{children}</main>
+      <main id="main-content" tabIndex="-1">{children}</main>
       <footer className="site-footer">
         <p>© {new Date().getFullYear()} Painter Name</p>
       </footer>
