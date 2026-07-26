@@ -131,3 +131,24 @@ h2 { font-size: 1.5rem; }
   .project-list > li:nth-child(even) .project-placeholder { order: initial; }
   .project-placeholder { min-height: 20rem; }
 }
+
+.about-artist { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(16rem, .8fr); gap: clamp(2rem, 7vw, 6rem); margin-bottom: clamp(4rem, 9vw, 7rem); border-block: 1px solid #cbc5bb; padding-block: clamp(2rem, 5vw, 3.5rem); }
+.about-artist h2 { margin: .35rem 0 1rem; font-size: clamp(2rem, 4vw, 3.25rem); }
+.content-label { display: inline-block; margin: 0; border: 1px solid #928a7e; padding: .25rem .5rem; color: #59534b; font-size: .7rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.about-statement { max-width: 60ch; margin-bottom: 0; color: #59534b; font-size: 1.1rem; }
+.artist-details { display: grid; align-content: start; gap: 1rem; margin: 0; }
+.artist-details div { border-top: 1px solid #cbc5bb; padding-top: .65rem; }
+.artist-details dt { color: #71685d; font-size: .8rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+.artist-details dd { margin: .25rem 0 0; }
+.cv-list { gap: clamp(2.5rem, 6vw, 4rem); }
+.cv-list section { display: grid; grid-template-columns: minmax(12rem, .65fr) minmax(0, 1.35fr); gap: clamp(1.5rem, 6vw, 5rem); padding-block: 1.5rem; }
+.cv-list section h2 { margin: 0; }
+.cv-list ol { display: grid; gap: 1.5rem; margin: 0; padding: 0; list-style: none; }
+.cv-list li { display: grid; grid-template-columns: 4rem 1fr; gap: 1.25rem; }
+.cv-list time { color: #71685d; font-variant-numeric: tabular-nums; }
+.cv-list h3 { margin: 0; font-family: Georgia, serif; font-size: 1.15rem; font-weight: 400; }
+.cv-list li p { margin: .25rem 0 0; color: #686157; }
+
+@media (max-width: 700px) {
+  .about-artist, .cv-list section { grid-template-columns: 1fr; }
+}
