@@ -152,3 +152,20 @@ h2 { font-size: 1.5rem; }
 @media (max-width: 700px) {
   .about-artist, .cv-list section { grid-template-columns: 1fr; }
 }
+
+.contact-layout { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(16rem, .8fr); gap: clamp(2rem, 7vw, 6rem); }
+.contact-details { border-block: 1px solid #cbc5bb; padding-block: clamp(2rem, 5vw, 3.5rem); }
+.contact-details h2, .enquiry-guidance h2 { margin: .35rem 0 1rem; font-size: clamp(2rem, 4vw, 3.25rem); }
+.contact-note { max-width: 48ch; color: #59534b; }
+.contact-details dl { display: grid; gap: 1rem; margin: 2rem 0 0; }
+.contact-details dl div { border-top: 1px solid #cbc5bb; padding-top: .75rem; }
+.contact-details dt { color: #71685d; font-size: .8rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+.contact-details dd { margin: .25rem 0 0; }
+.contact-details a { text-underline-offset: .25rem; }
+.enquiry-guidance { align-self: start; padding-block: clamp(2rem, 5vw, 3.5rem); }
+.enquiry-guidance ul { display: grid; gap: .75rem; margin: 1.5rem 0 2rem; padding-left: 1.25rem; }
+
+@media (max-width: 700px) {
+  .contact-layout { grid-template-columns: 1fr; }
+  .enquiry-guidance { padding-top: 0; }
+}
